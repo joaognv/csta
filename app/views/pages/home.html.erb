@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
+<h1>CSta - Find a Chill Spot</h1>
+   <!-- TODO: Put your HTML code in here -->
+  <div>
+   <div>
+      <input type="text" class="searchTerm" placeholder="Where do you want to crash?">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+   </div>
+
+<p>Banner will go here</p>
+
+<table>
+  <tr>
+    <th colspan="2">Top 5 Locations</th>
+
+  </tr>
+
+  <% @spots.each do |spot| %>
+  <tr>
+    <td><%= spot.city  %></td>
+    <td><%= spot.price  %></td>
+     </tr>
+  <% end %>
+</table>
+
 <p>Find me in app/views/pages/home.html.erb</p>
+
+
+
+<p>Footer</p>
