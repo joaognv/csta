@@ -24,7 +24,7 @@ class SpotsController < ApplicationController
 
  private
 
-  def spot_params
-    params.require(:spot).permit(:city, :description)
+  def spot_params  # should i have (:title, :body, aswell as :photo) below?
+    params.require(:spot).permit(:city, :description, :title, :body, :photo)
   end
 end
