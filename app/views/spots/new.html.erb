@@ -3,7 +3,6 @@
 
 
 <%= simple_form_for(@spot) do |s| %>
-<!--  -->
   <%= s.input :city %>
   <%= s.input :description %>
   <%= s.input :capacity %>
@@ -17,7 +16,5 @@
   <%= s.input :photo_cache, as: :hidden %>
   <%= s.submit %>
 <% end %>
-
-<%= link_to 'Back to homepage', spots_path, class: "btn btn-primary" %>
-
+<%= link_to 'Back to spots', spots_path, class: "btn btn-primary" %>
 </div>
