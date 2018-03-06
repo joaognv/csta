@@ -1,4 +1,7 @@
 here it is:
 <%= @spot.city %>
 <%= @spot.description %>
+
+<%= cl_image_tag @spot.photo, height: 300, width: 400, crop: :fill, effect: "art:fes" %>
+
 <%= link_to 'Back to homepage', spots_path, class: "btn btn-primary" %>

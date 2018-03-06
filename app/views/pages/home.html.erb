@@ -11,6 +11,7 @@
 <h3>Top 5 Spots in Barcelona</h3>
 
   <% @spots.each do |spot| %>
+
       <div class="spot-card">
           <%= link_to spot_path(spot) do %>
           <%= spot.city %>
@@ -18,5 +19,6 @@
         <% end %>
       </div>
 <% end %>
+
 
 
