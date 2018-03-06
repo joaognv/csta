@@ -8,24 +8,15 @@
       </button>
    </div>
 
-<p>Banner will go here</p>
-
-<table>
-  <tr>
-    <th colspan="2">Top 5 Locations</th>
-
-  </tr>
+<h3>Top 5 Spots in Barcelona</h3>
 
   <% @spots.each do |spot| %>
-  <tr>
-    <td><%= spot.city  %></td>
-    <td><%= spot.price  %></td>
-     </tr>
-  <% end %>
-</table>
-
-<p>Find me in app/views/pages/home.html.erb</p>
-
+      <div class="spot-card">
+          <%= link_to spot_path(spot) do %>
+          <%= spot.city %>
+          <%= spot.price %>
+        <% end %>
+      </div>
+<% end %>
 
 
-<p>Footer</p>
