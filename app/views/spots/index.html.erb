@@ -1,0 +1,14 @@
+<h1>Spots#index</h1>
+
+<% @spots.each do |s| %>
+  <div class="spot-card">
+    <%= link_to spot_path(s) do %>
+      <%= s.city %>
+      <%= s.description %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= link_to 'Create a new Spot', new_spot_path, class: "btn btn-primary" %>
+
+

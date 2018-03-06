@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 user1 = User.create(email: "test@gmail.com", password: '123456')
 
 user2 = User.create(email: "test2@gmail.com", password: '123456')
@@ -14,3 +13,6 @@ spot1 = Spot.create(user: user1, description: "Nice chill spot near city center"
 
 spot2 = Spot.create(user: user1, description: "Nice chill spot near city center", city: "Gracia", price: 15, capacity: 3, shower: true, wifi: true, pets: false)
 spot3 = Spot.create(user: user1, description: "Nice chill spot near city center", city: "Born", price: 22, capacity: 3, shower: true, wifi: true, pets: false)
+
+# spot2 = Spot.create()
+
