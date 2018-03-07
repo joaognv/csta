@@ -18,6 +18,8 @@ gem 'webpacker'
 gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave', '~> 1.2'
+gem 'jquery-ui-rails'
+gem 'form_slider'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
