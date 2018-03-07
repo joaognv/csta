@@ -1,12 +1,28 @@
-<h1>CSta - Find a Chill Spot</h1>
-   <!-- TODO: Put your HTML code in here -->
-  <div>
-   <div>
+
+   <!-- TODO: Put your HTML code in here --><div>
+   <!-- <div>
       <input type="text" class="searchTerm" placeholder="Where do you want to crash?">
       <button type="submit" class="searchButton">
         <i class="fa fa-search"></i>
       </button>
-   </div>
+   </div> -->
+
+    <div>
+    <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.4) 50%), url(<%= image_path "chill_couch.jpeg" %>);">
+  <div>
+  <h1>Find a couch near you!</h1>
+   <p>Good for: long flight layovers... quick siesta near work...
+  <div class="search-bar">
+    <form action="/spots" class="form-inline padded">
+      <input type="text" class="form-control border-radius input-lg" placeholder="Barcelona">
+      <input type="text" name="checkin_time" class="form-control border-radius input-lg timepicker" placeholder="Check in Time">
+      <input type="text" name="checkout_time" class="form-control border-radius input-lg timepicker" placeholder="Check out Time">
+
+      <input type="submit" class="btn btn-danger btn-lg" value="Search">
+    </form>
+  </div>
+  </div>
+</div>
 
 <h3>Top 5 Spots in Barcelona</h3>
 
