@@ -18,14 +18,18 @@
 
 
 <div class="container">
-<h3>Top 5 Spots in Barcelona</h3>
-
-  <% @spots.each do |spot| %>
-      <div>
-          <%= link_to spot_path(spot) do %>
-          <%= spot.city %>
-         <% end %>
+<h3>Hot Spots</h3>
+  <div class="row">
+    <% @spots.each do |s| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+        <div class="card-category">
+          <p><%= s.city %></p>
+        </div>
+        <%= link_to "", spot_path(s), class: "card-link" %>
       </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
 
 </div>
