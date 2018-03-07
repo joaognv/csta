@@ -1,20 +1,21 @@
-<h1> Add a new Spot </h1>
-
-
+<h1> Add a new Chill Spot </h1>
 
 <%= simple_form_for(@spot) do |s| %>
   <%= s.input :city %>
+  <%= s.input :address %>
   <%= s.input :description %>
-  <%= s.input :capacity %>
-  <%= s.input :price %>
-  <%= s.input :shower %>
-  <%= s.input :wifi %>
-  <%= s.input :pets %>
-  <%= s.input :coffee %>
-  <%= s.input :kitchen  %>
+  <%= s.input :price%>
+  <%= s.input :shower, wrapper_html: {class: "inline-check"} %>
+  <%= s.input :wifi, wrapper_html: {class: "inline-check"} %>
+  <%= s.input :pets, wrapper_html: {class: "inline-check"} %>
+  <%= s.input :coffee, wrapper_html: {class: "inline-check"} %>
+  <%= s.input :kitchen, wrapper_html: {class: "inline-check"}  %>
   <%= s.input :photo %>
   <%= s.input :photo_cache, as: :hidden %>
   <%= s.submit %>
 <% end %>
 <%= link_to 'Back to spots', spots_path, class: "btn btn-primary" %>
 </div>
+
+
+
