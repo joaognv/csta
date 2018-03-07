@@ -7,7 +7,7 @@
 
   get '/dashboard', to: "pages#dashboard"
 
-  resources :bookings, only: [:index, :show, :destroy, :update]
+  resources :bookings, only: [:index, :edit, :show, :destroy, :update]
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
