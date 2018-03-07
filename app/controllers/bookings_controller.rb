@@ -6,6 +6,22 @@ class BookingsController < ApplicationController
   end
 
 
+  def create
+    @spot = Spot.find(params[:spot_id])
+    @booking = Booking.new(booking_params)
+    @booking.spot = @spot
+    @booking.user = current_user
+    @booking.status = "Pending host approval"
+    if @booking.checkout_time && @booking.checkin_time
+      @booking.value = (@booking.checkout_time - @booking.checkin_time).to_f * @booking.spot.price.to_f
+    else @booking.value = 0
+    end
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      redirect_to spot_path(@spot)
+    end
+  end
 
   def edit
 
