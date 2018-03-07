@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     set_booking
       # We should change status here. Status should be set to 'pending' by default first
     @booking.status = "Pending confirmation"
-
+    @booking.save!
   end
 
   def destroy
