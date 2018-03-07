@@ -1,3 +1,4 @@
+<div class="container">
 Your location (soon to be cardified):
 <%= @spot.city %>
 <%= @spot.description %>
@@ -5,3 +6,5 @@ Your location (soon to be cardified):
 <%= cl_image_tag @spot.photo, height: 300, width: 400, crop: :fill, effect: "art:fes" %>
 
 <%= link_to 'Back to spots', spots_path, class: "btn btn-primary" %>
+
+</div>
