@@ -13,15 +13,20 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.spot = @spot
     @booking.user = current_user
-    @booking.status = "Pending host approval"
-    if @booking.checkout_time && @booking.checkin_time
-      @booking.value = (@booking.checkout_time - @booking.checkin_time).to_f * @booking.spot.price.to_f
+    @booking.status = "Pending confirmation"
+    if @booking.time_arrive && @booking.time_leave
+      @booking.price = (@booking.time_leave - @booking.time_arrive).to_f * @booking.spot.price.to_f
     else @booking.value = 0
     end
     if @booking.save
-      redirect_to booking_path(@booking)
-    else
+       flash[:notice] = "Thank your for booking. It has been forwarded to the owner"
+
       redirect_to spot_path(@spot)
+    else
+      flash[:alert] = @booking.errors.full_messages
+
+      redirect_to spot_path(@spot)
+
     end
   end
 
@@ -53,7 +58,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:require).permit(:status, :time_arrive, :time_leave)
+    params.require(:booking).permit(:time_arrive, :time_leave, :price)
 
   end
 
