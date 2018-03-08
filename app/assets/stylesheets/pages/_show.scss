@@ -1,0 +1,20 @@
+// Specific CSS for your home-page
+
+.subpage_banner {
+    color: white;
+    text-align: center;
+    width: 100%;
+    background-size: cover !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-position: center;
+}
+
+
