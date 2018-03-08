@@ -12,7 +12,10 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 38px;
+}
+.navbar-wagon-brand {
+  display: flex;
 }
 
 /* User Avatar */
@@ -74,4 +77,10 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.csta-nav {
+  color: white;
+  font-family: Pacifico;
+  font-size: 27px;
 }
