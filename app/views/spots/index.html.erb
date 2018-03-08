@@ -1,11 +1,20 @@
 <div class="container">
-<h1 class="text-center">Chill Spots</h1>
+
+  <h1 class="spots-index-header">Search for spots near you</h1>
+  <div class="search-bar index-search">
+      <form action="/spots" method="GET" class="form-inline padded">
+        <input type="text" class="form-control border-radius input-md" placeholder="Barcelona">
+        <input type="text" name="checkin_time" class="form-control border-radius input-md timepicker" placeholder="Check in Time">
+        <input type="text" name="checkout_time" class="form-control border-radius input-md timepicker" placeholder="Check out Time">
+
+        <input type="submit" class="btn btn-danger btn-md" value="Search">
+      </form>
+  </div>
 <!-- -->
-<div class="container">
   <div class="row">
     <% @spots.each do |s| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path s.photo %>');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= s.photo.url ? (image_path s.photo) : "https://adorable-home.com/wp-content/uploads/2017/01/Navy-blue-living-room.jpg"; %>');">
         <div class="card-category"><%= s.description %></div>
         <div class="card-description">
           <p><%= s.city %></p>
@@ -17,7 +26,6 @@
       </div>
     <% end %>
   </div>
-</div>
 
 </div>
 
