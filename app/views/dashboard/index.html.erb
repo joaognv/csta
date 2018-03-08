@@ -1,0 +1,19 @@
+<div class="container">
+<h1>My chill spots</h1>
+
+<%# my couches %>
+<ul>
+  <% @owned_spots.each do |spot| %>
+    <li>
+      <p><%= spot.description %></p>
+      <p><%= spot.city %></p>
+    </li>
+  <% end %>
+</ul>
+
+
+
+
+<%= link_to 'Create a new Spot', new_spot_path, class: "btn btn-primary" %>
+
+</div>

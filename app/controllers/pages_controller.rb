@@ -10,8 +10,4 @@ class PagesController < ApplicationController
 
   def contact
   end
-
-  def dashboard
-    @user = current_user
-  end
 end
