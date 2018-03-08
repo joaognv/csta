@@ -1,8 +1,26 @@
 <div class="container">
 <h1>My chill spots</h1>
+<div class="row">
 
-<%= @user %>
 
+
+
+
+    <% @user.spots.each do |s| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path s.photo %>');">
+        <div class="card-category"><%= s.description %></div>
+        <div class="card-description">
+          <p><%= s.city %></p>
+        </div>
+<!--         <img class="card-user" src="<%= image_path s.photo %>">
+ -->
+          <%= link_to "", spot_path(s), class: "card-link" %>
+      </div>
+      </div>
+    <% end %>
+  </div>
+<%=  %>
 
 -----------------
 
