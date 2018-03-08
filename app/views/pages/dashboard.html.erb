@@ -1,9 +1,12 @@
-
-<h1 class="text-center">Chill Spots</h1>
-<!-- -->
 <div class="container">
-  <div class="row">
-    <% @spots.each do |s| %>
+<h1>My chill spots</h1>
+<div class="row">
+
+
+
+
+
+    <% @user.spots.each do |s| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path s.photo %>');">
         <div class="card-category"><%= s.description %></div>
@@ -17,10 +20,12 @@
       </div>
     <% end %>
   </div>
+<%=  %>
+
+-----------------
+
+<%= link_to 'Create a new Spot', new_spot_path, class: "btn btn-primary" %>
+
 </div>
 
-<
 
-    <% @spots.each do |s| %>
-
-    <% end %>
