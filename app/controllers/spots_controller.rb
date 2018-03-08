@@ -1,8 +1,13 @@
 class SpotsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  def index
+    @spots = Spot.all
+  end
+
   def new
     @spot = Spot.new
+    # @user = current_user
   end
 
   def create
@@ -16,29 +21,34 @@ class SpotsController < ApplicationController
     end
   end
 
-  def index
-    @spots = Spot.all
-  end
-
   def show
     @spot = Spot.find(params[:id])
   end
 
+  def edit
+    set_spot
+  end
 
+  def update
+    set_bed
+    @spot.update(spot_params)
+    redirect_to spot_path(@spot)
+  end
 
-  # def destroy
-  #   @spot = Spot.find(params[:id])
-  #   @spot.destroy
-  #   redirect_to spots_path(@spot.user) // not finished
-  # end
-
-
-
+  def destroy
+    set_spot
+    @spot.destroy
+    redirect_to root_path
+  end
 
 
  private
 
   def spot_params  # should i have (:title, :body, aswell as :photo) below?
     params.require(:spot).permit(:city, :description, :title, :body, :photo)
+  end
+
+  def set_spot
+    @spot = Spot.find(params[:id])
   end
 end

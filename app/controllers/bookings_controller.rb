@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
+  # Needs to disappear
   def index
-    @bookings = current_user.bookings
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
 
+  # Needs to be rewritten and tested
   def create
     @spot = Spot.find(params[:spot_id])
     @booking = Booking.new(booking_params)
@@ -23,6 +25,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  # Needs to disappear
+  def show
+    set_booking
+    @spot = booking.spot
+  end
+
+  # Needs to go
   def edit
 
   end
@@ -32,12 +41,13 @@ class BookingsController < ApplicationController
       # We should change status here. Status should be set to 'pending' by default first
     @booking.status = "Pending confirmation"
     @booking.save!
+    redirect_to booking_path(@booking)
   end
 
   def destroy
     set_booking
     @booking.destroy
-    redirect_to root
+    redirect_to root_path
   end
 
   private
