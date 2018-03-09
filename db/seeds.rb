@@ -11,7 +11,6 @@ User.all.delete_all
 user1 = User.create(email: "test@gmail.com", password: '123456')
 user2 = User.create(email: "test2@gmail.com", password: '123456')
 
-
 spot1 = Spot.create(user: user1, description: "Nice chill spot near city center", city: "Barcelona", address: "Carrer de Mallorca, 401", price: 8, capacity: 3, shower: true, wifi: true, pets: false)
 spot1.remote_photo_url = "https://images.pexels.com/photos/269141/pexels-photo-269141.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 spot1.save

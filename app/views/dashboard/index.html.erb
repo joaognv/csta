@@ -1,19 +1,20 @@
 <div class="container">
-<h1>My chill spots</h1>
-
-<%# my couches %>
-<ul>
-  <% @owned_spots.each do |spot| %>
-    <li>
-      <p><%= spot.description %></p>
-      <p><%= spot.city %></p>
-    </li>
-  <% end %>
-</ul>
-
-
-
-
-<%= link_to 'Create a new Spot', new_spot_path, class: "btn btn-primary" %>
-
+  <div>
+    <h1>Dashboard</h1>
+  </div>
+  <div class="my_couches">
+    <h3>My Couches</h3>
+    <%= render "shared/spotcards", spots: @owned_spots %>
+  </div>
+  <div>
+    <%= link_to 'Create a new Spot', new_spot_path, class: "btn btn-primary" %>
+  </div>
+  <br>
+  <br>
+  <div class="pending">
+    <h3>Pending</h3>
+    <%= render "shared/spotcards", spots: @bookings_as_visitor %>
+  </div>
+  <br>
+  <br>
 </div>

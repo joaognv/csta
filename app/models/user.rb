@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :spots
   has_many :bookings
+  has_many :rented_out_spots, through: :bookings, source: :spot
 end
