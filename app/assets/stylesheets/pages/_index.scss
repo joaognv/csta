@@ -37,32 +37,41 @@
     -ms-flex-pack: center;
     justify-content: center;
     background-position: center;
+
+  h1 {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 
 .bg-img {
-  margin: 40px;
-  width: 50%;
+  width: 25vw;
+  height: 45vh;
 
 }
 
 .spot-details {
-   margin: 50px;
    text-align: center;
-   width: 50%;
-   display:flex;
-   flex-direction: column;
-   justify-content: center;
+    width: 25vw;
+  height: 45vh;
+
 }
 
 .spot_wrapper {
+  margin-top: 30px;
   display:flex;
   height:400px;
+  justify-content: space-around;
+
 }
 
 .booking-form {
-  background-color:#3A4750;
-  height:300px;
-  width: 366px;
+  background-color: #25374E;
+  width: 25vw;
+  height: 45vh;
+  padding-top:15px
+
+
 }
 
 
