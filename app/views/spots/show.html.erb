@@ -8,7 +8,8 @@
 <!-- Everything between banner and map -->
 <div class="spot_wrapper">
 
-  <div class="bg-img" style="background-image: url(<%= @spot.photo.url ? @spot.photo : "http://www.muebles.com/wp-content/uploads/2013/02/Ambiente-Terraza-Rattan-sintetico.jpg";  %>);">
+  <div class="bg-img"
+        style="background-image: url('<%= @spot.photo.present? ? cl_image_path(@spot.photo) : "http://www.muebles.com/wp-content/uploads/2013/02/Ambiente-Terraza-Rattan-sintetico.jpg"; %>')">
   </div>
 
   <div class="spot-details">
