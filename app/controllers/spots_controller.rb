@@ -27,7 +27,7 @@ class SpotsController < ApplicationController
 
        @spots = Spot.where.not(latitude: nil, longitude: nil)
 
-    @markers = @spots.map do |flat|
+    @markers = @spots.map do |spot|
       {
         lat: spot.latitude,
         lng: spot.longitude#,
