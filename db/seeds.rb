@@ -31,17 +31,14 @@ spot5 = Spot.create(user: user1, description: "Relax & enjoy your ciesta ", city
 spot5.remote_photo_url = "http://homestylediary.com/wp-content/uploads/2016/06/Cozy-Living-Room-Interior.jpg"
 spot5.save
 
-spot6 = Spot.create(user: user1, description: "Ciesta with style", city: "Barcelona", address: "Carrer de les Guilleries, 10", price: 35, capacity: 2, shower: true, wifi: true, pets: true)
+spot6 = Spot.create(user: user2, description: "Ciesta with style", city: "Barcelona", address: "Carrer de les Guilleries, 10", price: 35, capacity: 2, shower: true, wifi: true, pets: true)
 spot6.remote_photo_url = "https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 spot6.save
 
-user1.spots << spot5
-user1.spots << spot6
-user1.spots << spot4
-user1.spots << spot3
 
-user1.rented_out_spots << spot1
-user1.rented_out_spots << spot2
+booking1 = Booking.create(user: user1, spot: spot3, time_arrive: Date.today, time_leave: Date.tomorrow, status: "pending")
+booking2 = Booking.create(user: user1, spot: spot4, time_arrive: Date.today, time_leave: Date.tomorrow, status: "pending")
+booking3 = Booking.create(user: user1, spot: spot6, time_arrive: Date.today, time_leave: Date.tomorrow, status: "pending")
 
 
 

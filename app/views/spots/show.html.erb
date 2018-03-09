@@ -34,9 +34,9 @@
   <div class="spot-info-wrapper">
     <div class="spot-info">
       <ul class="list-unstyled">
-         <li><h4> Details: <%= @spot.description %></h4></li>
-         <li><h4> City: <%= @spot.city.capitalize! %></h4> </li>
-         <li><h4> Price per hour: <%= @spot.price %></h4></li>
+         <li><h4> <strong>Details:</strong></h4><h6> <%= @spot.description %> </h6></li>
+         <li><h4> <strong>City:</strong></h4><h6> <%= @spot.city %> </h6></li>
+         <li><h4> <strong>Price:</strong></h4><h6> $<%= @spot.price %> </h6></li>
       </ul>
     </div>
   </div>
