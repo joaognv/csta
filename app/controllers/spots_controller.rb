@@ -25,15 +25,10 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
     @booking = Booking.new
 
-       @spots = Spot.where.not(latitude: nil, longitude: nil)
-
-    @markers = @spots.map do |spot|
-      {
-        lat: spot.latitude,
-        lng: spot.longitude#,
-        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
-      }
-    end
+    @markers = [{
+      lat: @spot.latitude,
+      lng: @spot.longitude
+    }]
   end
 
   def edit
@@ -56,7 +51,7 @@ class SpotsController < ApplicationController
  private
 
   def spot_params  # should i have (:title, :body, aswell as :photo) below?
-    params.require(:spot).permit(:city, :description, :title, :body, :photo)
+    params.require(:spot).permit(:city, :description, :title, :body, :photo, :price, :address)
   end
 
   def set_spot

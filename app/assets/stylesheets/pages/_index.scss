@@ -44,35 +44,48 @@
   }
 }
 
-.bg-img {
-  width: 25vw;
-  height: 45vh;
-
-}
-
-.spot-details {
-   text-align: center;
-    width: 25vw;
-  height: 45vh;
-
-}
-
 .spot_wrapper {
-  margin-top: 30px;
-  display:flex;
-  height:400px;
-  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  height: 400px;
+  justify-content: flex-start;
 
+  .bg-img {
+    // width: 25vw;
+    height: 100%;
+    flex: 1;
+    background: cover !important;
+  }
+
+  .spot-details {
+    text-align: center;
+    // width: 25vw;
+    flex: 1;
+    background-color: #25374E;
+  }
+
+  .spot-info-wrapper {
+    height: 100%;
+    background: #25374E;
+    opacity: 0.8;
+    h4 {
+      text-align: left;
+      color: white;
+    }
+    flex: 1;
+    .spot-info {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .booking-form {
+    background-color: #25374E;
+    // width: 25vw;
+    padding-top: 15px;
+  }
 }
 
-.booking-form {
-  background-color: #25374E;
-  width: 25vw;
-  height: 45vh;
-  padding-top:15px
-
-
-}
 
 
 

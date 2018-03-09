@@ -1,25 +1,21 @@
-
-
+<!-- Banner -->
 <div class="subpage_banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 0%, rgba(0,36,61,0.4) 50%), url(<%= asset_path 'socks_feet' %>);">
   <div>
-     <h1> <%= @spot.description %> </h1>
-
 
   </div>
 </div>
 
-</div> <!-- added this code below for the map, it mioght be in wrong place J -->
-
-
+<!-- Everything between banner and map -->
 <div class="spot_wrapper">
-    <div class="bg-img" style="background-image: url(<%= @spot.photo.url ? @spot.photo : "http://www.muebles.com/wp-content/uploads/2013/02/Ambiente-Terraza-Rattan-sintetico.jpg";  %>);">
+
+  <div class="bg-img" style="background-image: url(<%= @spot.photo.url ? @spot.photo : "http://www.muebles.com/wp-content/uploads/2013/02/Ambiente-Terraza-Rattan-sintetico.jpg";  %>);">
   </div>
+
   <div class="spot-details">
-
     <div class="booking-form">
-          <h3 style="color: white;"> Book now!</h3>
+      <h3 style="color: white;"> Book now!</h3>
 
-        <%= simple_form_for([@spot, @booking]) do |f| %>
+      <%= simple_form_for([@spot, @booking]) do |f| %>
         <%= f.error_notification %>
 
         <div class="form-inputs">
@@ -31,25 +27,23 @@
           <%= f.button :submit %>
         </div>
       <% end %>
+    </div>
+ </div>
 
-   </div>
-
-  </div>
-
-  <div class="showcard">
-
-<ul>
-  <li></li>
-   <li> <h4> Details: <%= @spot.description %> </h4></li>
-   <li></li>
-   <li><h4> City: <%= @spot.city.capitalize! %> </h4>  </li>
-   <li></li>
-  <li><h4> Price per hour: <%= @spot.price %> </h4>  </li>
-</ul>
+  <div class="spot-info-wrapper">
+    <div class="spot-info">
+      <ul class="list-unstyled">
+         <li><h4> Details: <%= @spot.description %></h4></li>
+         <li><h4> City: <%= @spot.city.capitalize! %></h4> </li>
+         <li><h4> Price per hour: <%= @spot.price %></h4></li>
+      </ul>
+    </div>
   </div>
 
 </div>
-<div class="container">
+
+
+<!-- Map -->
 <div
   id="map"
   style="width: 100%;
@@ -58,6 +52,3 @@
 ></div>
 
 
-<%= link_to 'Back to spots', spots_path, class: "btn btn-primary" %>
-
-</div>
