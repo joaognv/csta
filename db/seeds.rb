@@ -12,6 +12,8 @@ user2 = User.create(email: "test2@gmail.com", password: '123456')
 spot1 = Spot.create(user: user1, description: "Nice chill spot near city center", city: "barcelona", price: 8, capacity: 3, shower: true, wifi: true, pets: false)
 
 spot2 = Spot.create(user: user1, description: "Nice chill spot near city center", city: "Gracia", price: 15, capacity: 3, shower: true, wifi: true, pets: false)
+spot2.photo.url = ""
+spot2.save
 spot3 = Spot.create(user: user1, description: "Nice chill spot near city center", city: "Born", price: 22, capacity: 3, shower: true, wifi: true, pets: false)
 
 # spot2 = Spot.create()

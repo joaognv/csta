@@ -1,0 +1,17 @@
+<div class="row">
+    <% spots.each do |s| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= s.photo.url ? (image_path s.photo) : "https://adorable-home.com/wp-content/uploads/2017/01/Navy-blue-living-room.jpg"; %>');">
+        <div class="card-category"><%= s.description %>
+        </div>
+        <div class="card-description">
+          <p><%= s.city %></p>
+        </div>
+<!--         <img class="card-user" src="<%= image_path s.photo %>">
+ -->
+          <%= link_to "", spot_path(s), class: "card-link" %>
+      </div>
+      </div>
+    <% end %>
+</div>
+
