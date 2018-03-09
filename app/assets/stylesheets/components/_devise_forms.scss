@@ -21,6 +21,14 @@
   margin-bottom: 100px;
 }
 
+.form-control {
+  transform: translate3d(0, 0, 0)
+}
+
+.help-block {
+  font-size: 14px;
+}
+
 .sign-title {
   color: $orange;
 }
@@ -32,12 +40,19 @@
 .form-group {
   input {
     background-color: transparent;
+    font-size: 14px;
   }
 }
+.form-control {
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    box-shadow: none;
+  }
 
 .btn {
   background-color: $orange;
-  color: white;
+  font-color: white;
   font: Montserrat;
 }
 .devise-form a {
@@ -47,7 +62,7 @@
   font-family: Montserrat;
 }
 
-.form-group.boolean.optional.user_remember_me {
+.form-group {
   font-family: Montserrat;
    font-size: 15px;
 }
