@@ -7,6 +7,24 @@
   position: relative;
   margin-bottom: 20px;
 }
+
+.showcard {
+  text-align: center;
+  width: 25vw;
+  height: 45vh;
+  background: #25374E;
+   h4 {
+    text-align: left;
+    color: white;
+   }
+
+
+}
+.square {
+    height: 20vh;
+    width: 20vh;
+    background-color: red
+  }
 .card-user {
   position: absolute;
   right: 10px;
