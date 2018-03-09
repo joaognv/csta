@@ -21,6 +21,10 @@
   margin-bottom: 100px;
 }
 
+.sign-card-lg {
+  width: 55vw;
+}
+
 .form-control {
   transform: translate3d(0, 0, 0)
 }
@@ -50,13 +54,42 @@
     box-shadow: none;
   }
 
-.btn {
+.btn-default {
   background-color: $orange;
-  font-color: white;
+  color: white;
   font: Montserrat;
 }
+.btn-default:active, .btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus, .open > .btn-default.dropdown-toggle:hover, .open > .btn-default.dropdown-toggle:focus, .open > .btn-default.dropdown-toggle.focus {
+  background-color: $orange;
+  color: white;
+  font-family: Montserrat;
+  opacity: 1;
+}
+.btn-default:focus {
+  background-color: $orange;
+  color: white;
+  font-family: Montserrat;
+  opacity: 1;
+}
+.btn-default:active {
+  background-color: $orange;
+  color: white;
+  font-family: Montserrat;
+  opacity: .8;
+}
+.btn-default:active:hover {
+  background-color: $orange;
+  color: white;
+  font-family: Montserrat;
+  opacity: .8;
+}
+.btn {
+  background-color: $orange;
+  color: white;
+  font-family: Montserrat;
+}
 .devise-form a {
-  color: grey;
+  color: $orange;
   text-decoration: none;
   font-size: 15px;
   font-family: Montserrat;
