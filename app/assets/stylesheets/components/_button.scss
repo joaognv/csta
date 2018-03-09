@@ -1,0 +1,32 @@
+.button-custom {
+  background-color: $orange;
+  color: white;
+  padding: 10px;
+}
+
+.button-custom:hover {
+  background-color: $orange;
+  opacity: .9;
+  color:white;
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+  &:hover {
+    color: $orange;
+  }
+}
+
+// a.button-custom {
+//   background-color: $orange;
+//   color: white;
+//   padding: 10px;
+
+// }
+
+// a.button-custom:hover {
+//   background-color: $orange;
+//   opacity: .9;
+//   color:white;
+// }
