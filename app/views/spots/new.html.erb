@@ -1,25 +1,26 @@
-<div class="container">
-  <div class="sign-card">
-    <h1 class="sign-title" > Add a new Chill Spot </h1>
-      <div class="devise-form">
-        <%= simple_form_for(@spot) do |s| %>
-          <%= s.input :city %>
-          <%= s.input :address %>
-          <%= s.input :description %>
-          <%= s.input :price%>
-          <%= s.input :shower, wrapper_html: {class: "inline-check"} %>
-          <%= s.input :wifi, wrapper_html: {class: "inline-check"} %>
-          <%= s.input :pets, wrapper_html: {class: "inline-check"} %>
-          <%= s.input :coffee, wrapper_html: {class: "inline-check"} %>
-          <%= s.input :kitchen, wrapper_html: {class: "inline-check"}  %>
-          <%= s.input :photo %>
-          <%= s.input :photo_cache, as: :hidden %>
-          <%= s.submit %>
-        <% end %>
-        <%= link_to 'Back to spots', spots_path, class: "btn btn-primary" %>
-      </div>
+
+  <div class="user-onboarding">
+    <div class="sign-card">
+      <h1 class="sign-title" > Add a new Chill Spot </h1>
+        <div class="devise-form">
+          <%= simple_form_for(@spot) do |s| %>
+            <%= s.input :city, placeholder: "City " %>
+            <%= s.input :address, placeholder: "Address" %>
+            <%= s.input :description, placeholder: "Short description of your spot" %>
+            <%= s.input :price, placeholder: "Price" %>
+            <%= s.input :shower, wrapper_html: {class: "inline-check"} %>
+            <%= s.input :wifi, wrapper_html: {class: "inline-check"} %>
+            <%= s.input :pets, wrapper_html: {class: "inline-check"} %>
+            <%= s.input :coffee, wrapper_html: {class: "inline-check"} %>
+            <%= s.input :kitchen, wrapper_html: {class: "inline-check"}  %>
+            <%= s.input :photo %>
+            <%= s.input :photo_cache, as: :hidden %>
+            <%= s.submit %> <%= link_to 'Back to spots', spots_path, class: "btn" %>
+          <% end %>
+        </div>
+    </div>
   </div>
-</div>
+
 
 
 
