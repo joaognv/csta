@@ -24,6 +24,16 @@ class SpotsController < ApplicationController
   def show
     @spot = Spot.find(params[:id])
     @booking = Booking.new
+
+       @spots = Spot.where.not(latitude: nil, longitude: nil)
+
+    @markers = @spots.map do |flat|
+      {
+        lat: spot.latitude,
+        lng: spot.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def edit

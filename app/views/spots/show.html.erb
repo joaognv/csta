@@ -33,9 +33,17 @@
       <% end %>
 
    </div>
-  </div>
-</div>
 
+  </div>
+
+
+</div> <!-- added this code below for the map, it mioght be in wrong place J -->
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
 
 
 
